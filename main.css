@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+    box-sizing: border-box;
+    font-family: "Poppins", "Lucida Sans", "Lucida Sans Regular",
+        "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    font-size: 16px;
+    --first-color: #8b52ff;
+    --second-color: #ff52ae;
+    --gradient-color: linear-gradient(73deg, #ff52af 11.6%, #9f53ff 83.86%);
+    --background-light: #f5f0ff;
+    --background-dark: #14092a;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Lora", "Times New Roman", Times, serif;
+}
+
+body {
+    background-color: var(--background-light);
+}
+
+header {
+    padding: 15px 24px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header .logo {
+    background: var(--gradient-color);
+    background-clip: text;
+    color: transparent;
+    font-family: "Lora", "Times New Roman", Times, serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.headerUtilities {
+    display: flex;
+    gap: 22px;
+}
+
+.toggle {
+    width: 24px;
+    height: 24px;
+    background-image: url("./assets/imgs/icon/moon.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#toggleCheckbox {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.menu {
+    width: 24px;
+    height: 24px;
+    background-image: url("./assets/imgs/icon/menu-light.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body:has(#toggleCheckbox:checked) {
+    background-color: var(--background-dark);
+}
+
+body:has(#toggleCheckbox:checked) .toggle {
+    background-image: url("./assets/imgs/icon/sun.svg");
+}
+
+body:has(#toggleCheckbox:checked) .menu {
+    background-image: url("./assets/imgs/icon/menu-dark.svg");
+}
