@@ -7,6 +7,8 @@
         "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
+    color: var(--text-color);
+    font-size: var(--normal-fontsize);
 }
 
 :root {
@@ -16,6 +18,12 @@
     --gradient-color: linear-gradient(73deg, #ff52af 11.6%, #9f53ff 83.86%);
     --background-light: #f5f0ff;
     --background-dark: #14092a;
+    --title-color: #220953;
+    --text-color: #4b3e65;
+    --white-color: #fff;
+    --normal-fontsize: 0.938rem;
+    --big-fontsize: 1.75rem;
+    --small-fontsize: 0.813rem;
 }
 
 h1,
@@ -23,10 +31,23 @@ h2,
 h3,
 h4 {
     font-family: "Lora", "Times New Roman", Times, serif;
+    color: var(--title-color);
+}
+
+h1 {
+    font-size: 2.75rem;
+}
+
+h2 {
+    font-size: 1.25rem;
 }
 
 body {
     background-color: var(--background-light);
+}
+
+main {
+    padding: 30px 24px;
 }
 
 header {
@@ -71,6 +92,64 @@ header .logo {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.introSection {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.introSection h1 {
+    font-weight: 400;
+    line-height: 135%;
+}
+
+.introSection h1 span {
+    font-size: inherit;
+    font-family: inherit;
+    color: var(--white-color);
+    padding: 4px 13px;
+    background: var(--gradient-color);
+    border-radius: 8px;
+    display: inline-block;
+    transform: rotate(10deg);
+}
+
+.introSection .textContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.introSection .textContent button {
+    background: var(--gradient-color);
+    padding: 16px 28px;
+    max-width: fit-content;
+    border: none;
+    color: var(--white-color);
+    border-radius: 64px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.introSection .textContent button i {
+    font-size: inherit;
+    color: var(--white-color);
+}
+
+.textContent .statistics {
+    font-size: var(--small-fontsize);
+    color: var(--title-color);
+    display: flex;
+    gap: 50px;
+}
+
+.textContent .statistics > div p:first-child {
+    font-size: var(--big-fontsize);
 }
 
 body:has(#toggleCheckbox:checked) {
