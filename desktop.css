@@ -227,7 +227,7 @@ main {
   border: none;
   border-radius: 32px;
   height: auto;
-  min-height: 400px;
+  min-height: 350px;
   padding: 64px 250px;
 }
 
@@ -341,6 +341,7 @@ main {
 .contents-ft {
   display: flex;
   gap: 4.5rem;
+  margin-right: 4%;
 }
 
 .each-content-ft {
