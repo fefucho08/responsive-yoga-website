@@ -26,6 +26,10 @@
     --small-fontsize: 0.813rem;
 }
 
+i {
+    font-size: inherit;
+}
+
 h1,
 h2,
 h3,
@@ -70,7 +74,7 @@ header .logo {
     gap: 22px;
 }
 
-.toggle {
+.toggleColor {
     width: 24px;
     height: 24px;
     background-image: url("./assets/imgs/icon/moon.svg");
@@ -79,19 +83,64 @@ header .logo {
     background-size: cover;
 }
 
-#toggleCheckbox {
+#toggleColorCheckbox {
     width: 100%;
     height: 100%;
     opacity: 0;
 }
 
-.menu {
+.toggleMenu {
     width: 24px;
     height: 24px;
     background-image: url("./assets/imgs/icon/menu-light.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+#toggleMenuCheckbox {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.openMenu {
+    font-weight: 500;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(16px);
+    flex-direction: column;
+    padding: 16px 24px;
+    gap: 32px;
+    display: none;
+}
+
+.openMenu label {
+    align-self: flex-end;
+    font-size: 1.5rem;
+}
+
+.openMenu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding-left: 24px;
+    gap: 48px;
+}
+
+.openMenu ul li a:link,
+.openMenu ul li a:visited {
+    text-decoration: none;
+    color: var(--title-color);
+}
+
+#currentPage {
+    background: var(--gradient-color);
+    background-clip: text;
+    color: transparent;
 }
 
 .introSection {
@@ -121,7 +170,22 @@ header .logo {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
     gap: 20px;
+}
+
+.starHome {
+    position: absolute;
+    top: 30%;
+    left: 8%;
+    z-index: -1;
+}
+
+.circleHome {
+    position: absolute;
+    top: 63%;
+    left: 78%;
+    z-index: -1;
 }
 
 .introSection .textContent button {
@@ -152,14 +216,18 @@ header .logo {
     font-size: var(--big-fontsize);
 }
 
-body:has(#toggleCheckbox:checked) {
+body:has(#toggleColorCheckbox:checked) {
     background-color: var(--background-dark);
 }
 
-body:has(#toggleCheckbox:checked) .toggle {
+body:has(#toggleColorCheckbox:checked) .toggleColor {
     background-image: url("./assets/imgs/icon/sun.svg");
 }
 
-body:has(#toggleCheckbox:checked) .menu {
+body:has(#toggleColorCheckbox:checked) .toggleMenu {
     background-image: url("./assets/imgs/icon/menu-dark.svg");
+}
+
+body:has(#toggleMenuCheckbox:checked) .openMenu {
+    display: flex;
 }

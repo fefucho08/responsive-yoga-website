@@ -12,23 +12,56 @@
         ></script>
     </head>
     <body>
+        <div class="openMenu">
+            <label for="toggleMenuCheckbox">
+                <i class="fa-solid fa-xmark"></i>
+            </label>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#" id="currentPage">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Health</a>
+                    </li>
+                    <li>
+                        <a href="#">Place</a>
+                    </li>
+                    <li>
+                        <a href="#">Follow</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
         <header>
             <a href="#" class="logo">Yoga</a>
             <div class="headerUtilities">
-                <div class="toggle">
-                    <input type="checkbox" id="toggleCheckbox" />
+                <div class="toggleColor">
+                    <input type="checkbox" id="toggleColorCheckbox" />
                 </div>
-                <div class="menu"></div>
+                <div class="toggleMenu">
+                    <input type="checkbox" id="toggleMenuCheckbox" />
+                </div>
             </div>
         </header>
         <main>
             <section class="introSection">
                 <div class="textContent">
                     <h1>Choose Your Best <span>Yoga</span> Teacher</h1>
+                    <img
+                        src="./assets/imgs/icon/home-star.svg"
+                        alt="Image of a star"
+                        class="starHome"
+                    />
                     <p>
                         Calm your mind and body with the best yoga teachers
                         available, relax your day and stay positive.
                     </p>
+                    <img
+                        src="./assets/imgs/icon/home-circle.svg"
+                        alt="Image of two circles"
+                        class="circleHome"
+                    />
                     <button>
                         Get Started For Free
                         <i class="fa-solid fa-arrow-right"></i>
