@@ -81,7 +81,7 @@ main {
   height: auto;
   min-height: 50px;
   gap: 0.5rem;
-  padding: 8px 8px;
+  padding: 12px 8px;
   width: 50%;
   position: relative;
   left: 147px;
@@ -115,7 +115,7 @@ main {
   height: auto;
   min-height: 50px;
   gap: 0.5rem;
-  padding: 8px 8px;
+  padding: 12px 8px;
   width: 52%;
   position: relative;
   left: 26px;
@@ -239,9 +239,6 @@ main {
 }
 
 .send-box {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
   margin-top: 5%;
 }
 
@@ -263,7 +260,7 @@ main {
   font-size: 0.75rem;
 }
 
-.bt-join button {
+.search-join button {
   font-family: "Poppins", sans-serif;
   background: linear-gradient(to right, #ff52af 0%, #9f53ff 100%);
   border: none;
@@ -279,12 +276,19 @@ main {
   gap: 0.75rem;
   width: 100%;
   box-shadow: 0 4px 12px rgba(91, 10, 255, 0.25);
+  margin-top: 5%;
 }
 
 /* footer */
 #footer {
   background-color: #1e0849;
   padding: 0;
+}
+
+.ft-top {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
 }
 
 .ft-container {
@@ -316,6 +320,7 @@ main {
   font-family: "Poppins", sans-serif;
   font-size: 0.938rem;
   color: #a197b4;
+  width: 66%;
 }
 
 .contents-ft {
@@ -344,10 +349,17 @@ main {
   font-family: "Poppins", sans-serif;
   font-size: 0.938rem;
   color: #a197b4;
+  width: 48%;
 }
 
 .line-ft {
   border: 1px solid #a197b4;
+}
+
+.ft-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
 }
 
 .social-ft {
