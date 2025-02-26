@@ -303,8 +303,12 @@ main {
 .content-ft-logo-title {
   font-family: "Lora", serif;
   font-size: 1.25rem;
+  display: inline-block;
+  width: 50px;
   background: linear-gradient(to right, #ff52af 0%, #9f53ff 100%);
+  background-size: cover;
   background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
