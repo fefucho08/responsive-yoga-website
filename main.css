@@ -24,6 +24,7 @@
     --first-color-light: #e5d9fd;
     --normal-fontsize: 0.938rem;
     --big-fontsize: 1.75rem;
+    --bigger-fontsize: 2rem;
     --small-fontsize: 0.813rem;
 }
 
@@ -32,9 +33,7 @@ i {
 }
 
 h1,
-h2,
-h3,
-h4 {
+h2 {
     font-family: "Lora", "Times New Roman", Times, serif;
     color: var(--title-color);
 }
@@ -191,7 +190,7 @@ header .logo {
     z-index: -1;
 }
 
-.introSection .textContent button {
+.textContent button {
     background: var(--gradient-color);
     padding: 16px 28px;
     max-width: fit-content;
@@ -200,15 +199,15 @@ header .logo {
     border-radius: 64px;
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 8px;
 }
 
-.introSection .textContent button i {
+.textContent button i {
     font-size: inherit;
     color: var(--white-color);
 }
 
-.textContent .statistics {
+.introSection .textContent .statistics {
     font-size: var(--small-fontsize);
     color: var(--title-color);
     display: flex;
@@ -294,6 +293,73 @@ header .logo {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.healthSection {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.healthSection .textContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    text-align: center;
+}
+
+.healthSection h2 {
+    font-size: var(--bigger-fontsize);
+    font-weight: 400;
+    text-align: center;
+}
+
+.healthImage {
+    position: relative;
+}
+
+.healthImage img {
+    max-width: 100%;
+}
+
+.healthImage > div {
+    background-color: var(--white-color);
+    padding: 8px 12px;
+    border-radius: 12px;
+    max-width: fit-content;
+    font-weight: 500;
+    position: absolute;
+}
+
+.healthImage > div h4 {
+    font-weight: 500;
+}
+
+.healthImage > div p {
+    background: var(--gradient-color);
+    background-clip: text;
+    color: transparent;
+}
+
+.heartRate {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    top: 20%;
+}
+
+.coursesNum {
+    bottom: 10%;
+    right: 0;
+}
+
+.heartRate img {
+    background-color: #ffe6e5;
+    border-radius: 100%;
+    padding: 8px;
 }
 
 body:has(#toggleColorCheckbox:checked) {
