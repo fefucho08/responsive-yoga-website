@@ -146,8 +146,6 @@ main {
 
 .group-content-follow {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: 4rem;
 }
 
@@ -160,7 +158,7 @@ main {
 
 .gradient-tag {
   font-family: "Lora", serif;
-  font-size: 2rem;
+  font-size: 4rem;
   text-align: center;
   background: linear-gradient(to right, #ff52af 0%, #9f53ff 100%);
   background-clip: text;
@@ -173,8 +171,8 @@ main {
   border: none;
   border-radius: 64px;
   color: #ffffff;
-  font-weight: 500; /* medium */
-  font-size: 0.938rem;
+  font-weight: 500;
+  font-size: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -184,35 +182,52 @@ main {
   height: 88px;
 }
 
-.imgs-follow-group1 {
+/* .imgs-follow-group1 {
   display: flex;
   gap: 1rem;
-  margin-bottom: 7%;
+} */
+
+.title-bt-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 9%;
+  order: 2;
+}
+
+.first-follow-imgs {
+  order: 1;
 }
 
 .follow-yoga-1 {
-  padding-bottom: 15%;
+  width: 280px;
+}
+
+.second-follow-imgs {
+  order: 3;
 }
 
 .follow-yoga-2 {
-  padding-top: 15%;
+  width: 280px;
 }
+
+
+/* up and down desktop version part */
+
 
 .imgs-follow-group2 {
   display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+  justify-content: space-between;
 }
 
 .follow-yoga-3 {
-  padding-right: 20%;
-  /* align-self: flex-start; */
+  width: 500px;
 }
 
 .follow-yoga-4 {
-  padding-left: 20%;
-  /* align-self: flex-end; */
-}
+  width: 500px;
+} 
 
 /* third-section */
 .join-container {
