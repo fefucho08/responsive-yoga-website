@@ -68,6 +68,8 @@ main {
 .routine-img1 {
   position: relative;
   left: 16px;
+  width: 77%;
+  max-width: 300px;
   z-index: 2;
 }
 
@@ -87,6 +89,7 @@ main {
   left: 147px;
   top: -155px;
   z-index: 3;
+  max-width: fit-content;
 }
 
 .video-area p {
@@ -102,6 +105,8 @@ main {
   position: relative;
   left: 66px;
   top: -122px;
+  width: 77%;
+  max-width: 300px;
   z-index: 1;
 }
 
@@ -118,9 +123,10 @@ main {
   padding: 12px 8px;
   width: 52%;
   position: relative;
-  left: 26px;
+  left: 30px;
   top: -200px;
   z-index: 3;
+  max-width: fit-content;
 }
 
 .trainer-area p {
@@ -141,6 +147,7 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
+  gap: 1.5rem;
 }
 
 .title-bt-box {
@@ -150,7 +157,6 @@ main {
   align-items: center;
   gap: 1.5rem;
 }
-
 
 .follow-title p {
   font-family: "Lora", serif;
@@ -185,25 +191,22 @@ main {
   height: 88px;
 }
 
-/* .imgs-follow-group1 {
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 5%;
-} */
-
-/* .follow-yoga-1,
-.follow-yoga-2 {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 1rem; /* 이미지 사이 여백 */
-
+.first-follow-imgs {
+  width: 100%;
+}
 
 .follow-yoga-1 {
-  padding-top: 20%;
+  padding-top: 15%;
+  width: 100%;
+}
+
+.second-follow-imgs {
+  width: 100%;
 }
 
 .follow-yoga-2 {
   padding-top: 50%;
+  width: 100%;
 }
 
 .imgs-follow-group2 {
@@ -214,10 +217,12 @@ main {
 
 .follow-yoga-3 {
   padding-left: 6%;
+  width: 79%;
 }
 
 .follow-yoga-4 {
   padding-left: 25%;
+  width: 100%;
 }
 
 /* third-section */
@@ -389,7 +394,251 @@ main {
 }
 
 /* media query for desktop */
-@media (min-width: 1440px) {
+@media screen and (min-width: 1440px) {
+  main {
+    padding: 0 165px;
+  }
+
+  /* first-section */
+  .routine-container {
+    padding: 48px 0;
+  }
+
+  .routine-container-area {
+    display: flex;
+    gap: 4rem;
+  }
+
+  .data-routine {
+    width: 43%;
+    margin: 77px 0;
+  }
+
+  .routine-title-area {
+    font-size: 4rem;
+    text-align: start;
+  }
+
+  .routine-content-area {
+    font-size: 1rem;
+    text-align: start;
+  }
+
+  .routine-bt {
+    justify-content: normal;
+  }
+
+  .routine-bt button {
+    font-size: 1rem;
+    min-height: 60px;
+    width: 48%;
+  }
+
+  .imgs-routine {
+    width: 60%;
+  }
+
+  .routine-img1 {
+    left: 5%;
+    top: -3%;
+    width: 85%;
+    max-width: 5000px;
+  }
+
+  .video-area {
+    width: 32%;
+    left: 66%;
+    top: -91%;
+  }
+
+  .video-area p {
+    font-size: 1rem;
+  }
+
+  .routine-img2 {
+    left: 18%;
+    top: -60%;
+    width: 85%;
+    max-width: 5000px;
+  }
+
+  .trainer-area {
+    width: 33%;
+    left: 14%;
+    top: -98%;
+  }
+
+  .trainer-area p {
+    font-size: 1rem;
+  }
+
+  /* second-section */
+  .follow-container {
+    padding: 48px 0;
+  }
+
+  .group-content-follow {
+    display: flex;
+    gap: 4rem;
+  }
+
+  .follow-title p {
+    font-size: 4rem;
+  }
+
+  .gradient-tag {
+    font-size: 4rem;
+  }
+
+  .title-bt-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 9%;
+    order: 2;
+  }
+
+  .first-follow-imgs {
+    order: 1;
+    width: 45%;
+  }
+
+  .follow-yoga-1 {
+    width: 280px;
+    padding-top: 0;
+    width: 100%;
+  }
+
+  .second-follow-imgs {
+    order: 3;
+    width: 45%;
+  }
+
+  .follow-yoga-2 {
+    width: 280px;
+    padding-top: 0;
+    width: 100%;
+  }
+
+  .imgs-follow-group2 {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0;
+  }
+
+  .follow-yoga-3 {
+    width: 500px;
+    padding-left: 0;
+  }
+
+  .follow-yoga-4 {
+    width: 500px;
+    padding-left: 0;
+  }
+
+  /* third-section */
+  .join-container {
+    padding: 48px 0 88px 0;
+  }
+
+  .join-form {
+    min-height: 350px;
+    padding: 64px 250px;
+  }
+
+  .join-title {
+    font-size: 3.5rem;
+  }
+
+  .search-join {
+    position: relative;
+    width: 85%;
+    margin: 0 auto;
+  }
+
+  .search-join input {
+    padding: 0 22px;
+    padding-right: 140px;
+  }
+
+  .search-join input::placeholder {
+    font-size: 0.813rem;
+  }
+
+  .search-join button {
+    position: absolute;
+    top: 50%;
+    right: 16%;
+    transform: translate(50%, -50%);
+    font-size: 1rem;
+    min-height: 50px;
+    gap: 0.5rem;
+    padding: 12px 24px;
+    margin-top: 0;
+    width: 29%;
+  }
+
+  /* footer */
+  .ft-top {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0;
+  }
+
+  .ft-container {
+    padding: 64px 165px;
+    gap: 3rem;
+  }
+
+  .content-ft-logo {
+    gap: 2.5rem;
+  }
+
+  .content-ft-logo-title {
+    font-size: 1.5rem;
+    width: 60px;
+  }
+
+  .content-ft-logo-info {
+    font-size: 1rem;
+    width: 61%;
+  }
+
+  .contents-ft {
+    flex-direction: row;
+    gap: 4.5rem;
+    margin-right: 4%;
+  }
+
+  .each-content-ft {
+    gap: 2.5rem;
+  }
+
+  .ft-address,
+  .ft-contact,
+  .ft-office {
+    font-size: 1.25rem;
+  }
+
+  .ft-address-info,
+  .ft-contact-info,
+  .ft-office-info {
+    font-size: 1rem;
+    width: 91%;
+  }
+
+  .ft-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0;
+  }
+
+  .social-ft {
+    gap: 2rem;
+  }
+
+  .copy-ft {
+    font-size: 0.813rem;
+  }
 }
-
-
