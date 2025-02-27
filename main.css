@@ -8,11 +8,12 @@
     margin: 0;
     padding: 0;
     color: var(--text-color);
-    font-size: var(--normal-fontsize);
+    font-size: var(--normal-fontsize-mobile);
 }
 
 :root {
     font-size: 16px;
+    scroll-behavior: smooth;
     --first-color: #8b52ff;
     --second-color: #ff52ae;
     --gradient-color: linear-gradient(73deg, #ff52af 11.6%, #9f53ff 83.86%);
@@ -24,14 +25,19 @@
     --dark-text-color: #a094b8;
     --white-color: #fff;
     --first-color-light: #e5d9fd;
-    --normal-fontsize: 0.938rem;
-    --big-fontsize: 1.75rem;
-    --bigger-fontsize: 2rem;
-    --small-fontsize: 0.813rem;
+    --normal-fontsize-mobile: 0.938rem;
+    --big-fontsize-mobile: 1.75rem;
+    --bigger-fontsize-mobile: 2rem;
+    --small-fontsize-mobile: 0.813rem;
+    --noraml-fontsize-desktop: 1rem;
+    --biggest-fontize-desktop: 6rem;
+    --bigger-fontsize-desktop: 4rem;
+    --big-fontsize-desktop: 3.5rem;
 }
 
 i {
     font-size: inherit;
+    color: inherit;
 }
 
 h1,
@@ -70,6 +76,10 @@ header .logo {
     font-size: 1.25rem;
     font-weight: 500;
     max-width: fit-content;
+}
+
+.desktopNavigation {
+    display: none;
 }
 
 .headerUtilities {
@@ -212,14 +222,15 @@ header .logo {
 }
 
 .introSection .textContent .statistics {
-    font-size: var(--small-fontsize);
+    font-family: "Lora", "Times New Roman", Times, serif;
+    font-size: var(--small-fontsize-mobile);
     color: var(--title-color);
     display: flex;
     gap: 50px;
 }
 
 .textContent .statistics > div p:first-child {
-    font-size: var(--big-fontsize);
+    font-size: var(--big-fontsize-mobile);
 }
 
 .adSection {
@@ -239,7 +250,7 @@ header .logo {
 }
 
 .listYoga p {
-    font-size: var(--big-fontsize);
+    font-size: var(--big-fontsize-mobile);
     font-family: "Lora", "Times New Roman", Times, serif;
     font-weight: 500;
     color: var(--title-color);
@@ -317,7 +328,7 @@ header .logo {
 }
 
 .healthSection h2 {
-    font-size: var(--bigger-fontsize);
+    font-size: var(--bigger-fontsize-mobile);
     font-weight: 400;
     text-align: center;
 }
@@ -368,6 +379,193 @@ header .logo {
     padding: 8px;
 }
 
+.backToTop {
+    display: none;
+}
+
+/* DESKTOP */
+
+@media screen and (min-width: 1440px) {
+    * {
+        font-size: var(--noraml-fontsize-desktop);
+    }
+
+    header {
+        padding: 23px 165px;
+    }
+
+    header .logo {
+        font-size: 1.5rem;
+    }
+
+    .desktopNavigation {
+        display: block;
+    }
+
+    .desktopNavigation ul {
+        list-style: none;
+        display: flex;
+        gap: 46px;
+    }
+
+    .desktopNavigation > ul > li {
+        position: relative;
+    }
+
+    .desktopNavigation > ul li a:link,
+    .desktopNavigation ul li a:visited {
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .desktopNavigation > ul li a:hover {
+        background: var(--gradient-color);
+        background-clip: text;
+        color: transparent;
+        max-width: fit-content;
+    }
+
+    .desktopNavigation > ul > li:hover > .moreOptions {
+        display: block;
+    }
+
+    .desktopNavigation .moreOptions {
+        display: none;
+        position: absolute;
+        z-index: 1;
+        background: var(--background-light);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        left: 50%;
+        top: 110%;
+        transform: translateX(-50%);
+    }
+
+    .desktopNavigation .moreOptions > ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 6px;
+        text-align: center;
+    }
+
+    .desktopNavigation .moreOptions > ul > li {
+        width: max-content;
+        padding: 3px 10px;
+    }
+
+    .toggleMenu {
+        display: none;
+    }
+
+    main {
+        padding: 30px 165px;
+    }
+
+    .introSection {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .introSection .textContent {
+        text-align: left;
+        align-items: flex-start;
+        width: 50%;
+        gap: 48px;
+    }
+
+    .introSection h1 {
+        font-size: var(--biggest-fontize-desktop);
+        font-weight: 500;
+    }
+
+    .starHome {
+        top: 20%;
+        left: 85%;
+        width: 95px;
+    }
+
+    .circleHome {
+        top: 55%;
+        left: -5%;
+        width: 24px;
+    }
+
+    .introSection > img {
+        width: 50%;
+    }
+
+    .textContent .statistics > div {
+        text-align: center;
+    }
+
+    .textContent .statistics > div p:first-child {
+        font-family: "Lora", "Times New Roman", Times, serif;
+        font-size: var(--big-fontsize-desktop);
+    }
+
+    .adSection {
+        flex-direction: row;
+        gap: 48px;
+    }
+
+    .listYoga p {
+        font-size: var(--big-fontsize-desktop);
+    }
+
+    .adSection .paragraphContent {
+        text-align: left;
+    }
+
+    .adSection .paragraphContent img {
+        left: -5%;
+    }
+
+    .healthSection {
+        flex-direction: row;
+        gap: 32px;
+    }
+
+    .healthSection .healthImage {
+        order: -1;
+        max-width: 45%;
+    }
+
+    .healthSection .textContent {
+        text-align: left;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .healthSection .textContent h2 {
+        font-size: var(--bigger-fontsize-desktop);
+        text-align: left;
+    }
+
+    .heartRate {
+        top: 15%;
+        left: 10%;
+    }
+
+    .backToTop {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        position: fixed;
+        right: 2%;
+        bottom: 5%;
+        background: var(--gradient-color);
+        color: var(--white-color);
+        padding: 6px;
+        width: 32px;
+        height: 32px;
+        border-radius: 100%;
+        aspect-ratio: 1/1;
+        cursor: pointer;
+    }
+}
+
 /* DARK THEME */
 
 body:has(#toggleColorCheckbox:checked) {
@@ -389,6 +587,47 @@ body:has(#toggleColorCheckbox:checked) .toggleColor {
 
 body:has(#toggleColorCheckbox:checked) .toggleMenu {
     background-image: url("./assets/imgs/icon/menu-dark.svg");
+}
+
+body:has(#toggleColorCheckbox:checked) .desktopNavigation > ul > li a:link,
+body:has(#toggleColorCheckbox:checked) .desktopNavigation > ul > li a:visited {
+    color: var(--dark-text-color);
+}
+
+body:has(#toggleColorCheckbox:checked) .desktopNavigation ul li a:hover {
+    background: var(--gradient-color);
+    background-clip: text;
+    color: transparent;
+    max-width: fit-content;
+}
+
+body:has(#toggleColorCheckbox:checked) .desktopNavigation .moreOptions {
+    color: var(--text-color);
+    background-color: var(--dark-title-color);
+}
+
+body:has(#toggleColorCheckbox:checked)
+    .desktopNavigation
+    .moreOptions
+    > ul
+    > li
+    > a:link,
+body:has(#toggleColorCheckbox:checked)
+    .desktopNavigation
+    .moreOptions
+    > ul
+    > li
+    > a:visited {
+    color: var(--title-color);
+}
+
+body:has(#toggleColorCheckbox:checked)
+    .desktopNavigation
+    .moreOptions
+    > ul
+    > li
+    > a:hover {
+    color: transparent;
 }
 
 body:has(#toggleColorCheckbox:checked) .openMenu {
