@@ -29,7 +29,7 @@
     --big-fontsize-mobile: 1.75rem;
     --bigger-fontsize-mobile: 2rem;
     --small-fontsize-mobile: 0.813rem;
-    --noraml-fontsize-desktop: 1rem;
+    --normal-fontsize-desktop: 1rem;
     --biggest-fontize-desktop: 6rem;
     --bigger-fontsize-desktop: 4rem;
     --big-fontsize-desktop: 3.5rem;
@@ -52,6 +52,7 @@ h1 {
 
 h2 {
     font-size: 1.25rem;
+    font-weight: 400;
 }
 
 body {
@@ -390,16 +391,16 @@ header .logo {
     margin-bottom: 10%;
 }
 
-.routine-title-area {
+.routine-title-area h2 {
     font-family: "Lora", serif;
-    font-size: 2rem;
+    font-size: var(--bigger-fontsize-mobile);
     text-align: center;
     color: #220953;
 }
 
 .routine-content-area {
     font-family: "Poppins", sans-serif;
-    font-size: 0.938rem;
+    font-size: var(--normal-fontsize-mobile);
     text-align: center;
     margin-top: 8%;
     color: #4b3e65;
@@ -417,7 +418,7 @@ header .logo {
     border-radius: 64px;
     color: #ffffff;
     font-weight: 500; /* medium */
-    font-size: 0.938rem;
+    font-size: var(--normal-fontsize-mobile);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -452,7 +453,6 @@ header .logo {
     min-height: 50px;
     gap: 0.5rem;
     padding: 12px 8px;
-    width: 50%;
     position: relative;
     left: 147px;
     top: -155px;
@@ -466,7 +466,7 @@ header .logo {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 500;
-    font-size: 0.813rem;
+    font-size: var(--small-fontsize-mobile);
 }
 
 .routine-img2 {
@@ -503,7 +503,7 @@ header .logo {
     background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 500;
-    font-size: 0.813rem;
+    font-size: var(--small-fontsize-mobile);
 }
 
 /* second-section */
@@ -526,16 +526,17 @@ header .logo {
     gap: 1.5rem;
 }
 
-.follow-title p {
+.follow-title h2 {
     font-family: "Lora", serif;
-    font-size: 2rem;
+    font-size: var(--bigger-fontsize-mobile);
+    font-weight: 400;
     text-align: center;
     color: #220953;
 }
 
 .gradient-tag {
     font-family: "Lora", serif;
-    font-size: 2rem;
+    font-size: var(--bigger-fontsize-mobile);
     text-align: center;
     background: linear-gradient(to right, #ff52af 0%, #9f53ff 100%);
     background-clip: text;
@@ -549,7 +550,7 @@ header .logo {
     border-radius: 64px;
     color: #ffffff;
     font-weight: 500; /* medium */
-    font-size: 0.938rem;
+    font-size: var(--normal-fontsize-mobile);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -612,14 +613,15 @@ header .logo {
 
 .join-title {
     font-family: "Lora", serif;
-    font-size: 1.75rem;
+    font-size: var(--big-fontsize-mobile);
     color: #ffffff;
     text-align: center;
+    font-weight: 400;
 }
 
 .join-content {
     font-family: "Poppins", sans-serif;
-    font-size: 0.938rem;
+    font-size: var(--normal-fontsize-mobile);
     color: #f5f0ff;
     text-align: center;
 }
@@ -653,7 +655,7 @@ header .logo {
     border-radius: 64px;
     color: #ffffff;
     font-weight: 500; /* medium */
-    font-size: 0.938rem;
+    font-size: var(--normal-fontsize-mobile);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -704,7 +706,7 @@ header .logo {
 
 .content-ft-logo-info {
     font-family: "Poppins", sans-serif;
-    font-size: 0.938rem;
+    font-size: var(--normal-fontsize-mobile);
     color: #a197b4;
     width: 66%;
 }
@@ -733,7 +735,7 @@ header .logo {
 .ft-contact-info,
 .ft-office-info {
     font-family: "Poppins", sans-serif;
-    font-size: 0.938rem;
+    font-size: var(--normal-fontsize-mobile);
     color: #a197b4;
     width: 48%;
 }
@@ -769,7 +771,7 @@ header .logo {
 
 @media screen and (min-width: 1440px) {
     * {
-        font-size: var(--noraml-fontsize-desktop);
+        font-size: var(--normal-fontsize-desktop);
     }
 
     header {
@@ -945,12 +947,17 @@ header .logo {
     }
 
     .routine-title-area {
-        font-size: 4rem;
+        font-size: var(--bigger-fontsize-desktop);
         text-align: start;
     }
 
+    .routine-title-area h2 {
+        font-size: var(--bigger-fontsize-desktop);
+        font-weight: 400;
+    }
+
     .routine-content-area {
-        font-size: 1rem;
+        font-size: var(--normal-fontsize-desktop);
         text-align: start;
     }
 
@@ -959,7 +966,7 @@ header .logo {
     }
 
     .routine-bt button {
-        font-size: 1rem;
+        font-size: var(--normal-fontsize-desktop);
         min-height: 60px;
         width: 48%;
     }
@@ -982,7 +989,7 @@ header .logo {
     }
 
     .video-area p {
-        font-size: 1rem;
+        font-size: var(--normal-fontsize-desktop);
     }
 
     .routine-img2 {
@@ -999,7 +1006,7 @@ header .logo {
     }
 
     .trainer-area p {
-        font-size: 1rem;
+        font-size: var(--normal-fontsize-desktop);
     }
 
     /* second-section */
@@ -1012,19 +1019,23 @@ header .logo {
         gap: 4rem;
     }
 
+    .follow-title h2 {
+        font-size: var(--bigger-fontsize-desktop);
+    }
+
     .follow-title p {
-        font-size: 4rem;
+        font-size: var(--bigger-fontsize-desktop);
     }
 
     .gradient-tag {
-        font-size: 4rem;
+        font-size: var(--bigger-fontsize-desktop);
     }
 
     .title-bt-box {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 2rem;
+        gap: var(--bigger-fontsize-mobile);
         margin-top: 9%;
         order: 2;
     }
@@ -1078,7 +1089,7 @@ header .logo {
     }
 
     .join-title {
-        font-size: 3.5rem;
+        font-size: var(--big-fontsize-desktop);
     }
 
     .search-join {
@@ -1093,7 +1104,7 @@ header .logo {
     }
 
     .search-join input::placeholder {
-        font-size: 0.813rem;
+        font-size: var(--small-fontsize-mobile);
     }
 
     .search-join button {
@@ -1101,7 +1112,7 @@ header .logo {
         top: 50%;
         right: 16%;
         transform: translate(50%, -50%);
-        font-size: 1rem;
+        font-size: var(--normal-fontsize-desktop);
         min-height: 50px;
         gap: 0.5rem;
         padding: 12px 24px;
@@ -1131,7 +1142,7 @@ header .logo {
     }
 
     .content-ft-logo-info {
-        font-size: 1rem;
+        font-size: var(--normal-fontsize-desktop);
         width: 61%;
     }
 
@@ -1154,7 +1165,7 @@ header .logo {
     .ft-address-info,
     .ft-contact-info,
     .ft-office-info {
-        font-size: 1rem;
+        font-size: var(--normal-fontsize-desktop);
         width: 91%;
     }
 
@@ -1165,11 +1176,11 @@ header .logo {
     }
 
     .social-ft {
-        gap: 2rem;
+        gap: var(--bigger-fontsize-mobile);
     }
 
     .copy-ft {
-        font-size: 0.813rem;
+        font-size: var(--small-fontsize-mobile);
     }
 
     .backToTop {
@@ -1261,6 +1272,14 @@ body:has(#toggleColorCheckbox:checked) .openMenu {
 
 body:has(#toggleColorCheckbox:checked) .healthImage > div p {
     color: transparent;
+}
+
+body:has(#toggleColorCheckbox:checked) .join-title,
+body:has(#toggleColorCheckbox:checked) .join-content,
+body:has(#toggleColorCheckbox:checked) .ft-address,
+body:has(#toggleColorCheckbox:checked) .ft-contact,
+body:has(#toggleColorCheckbox:checked) .ft-office {
+    color: var(--white-color);
 }
 
 body:has(#toggleColorCheckbox:checked) .openMenu ul li a:link,
