@@ -954,6 +954,7 @@ header .logo {
     .routine-title-area h2 {
         font-size: var(--bigger-fontsize-desktop);
         font-weight: 400;
+        text-align: left;
     }
 
     .routine-content-area {
