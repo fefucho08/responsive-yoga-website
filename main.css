@@ -123,7 +123,7 @@ header .logo {
     position: fixed;
     width: 100vw;
     height: 100vh;
-    z-index: 1;
+    z-index: 100;
     background-color: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(16px);
     flex-direction: column;
@@ -1289,6 +1289,10 @@ body:has(#toggleColorCheckbox:checked) .openMenu ul li a:visited {
 
 body:has(#toggleColorCheckbox:checked) #currentPage {
     color: transparent;
+}
+
+body:has(#toggleMenuCheckbox:checked) {
+    overflow-y: hidden;
 }
 
 body:has(#toggleMenuCheckbox:checked) .openMenu {
